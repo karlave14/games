@@ -4,7 +4,7 @@
 #include<stdbool.h>
 
 void instruction(){
-	printf("WELCOME TO HAMGMAN\N");
+	printf("WELCOME TO HAMGMAN\n");
 	printf("*********************\n");
 	printf("You have 5 lives\n");
 	printf("There are some word that could come out: \n");
@@ -83,14 +83,12 @@ int main(int argc, char** argv){
 	}else
 	int begin = argc;
 	srand(time(NULL));
-	int tam,i,cont,inicial,acertado=0,temp=0,oportunidades=8;
-	int repatido=0,gano=0;
-	char *word[]= {"Future\n","Rainbow","Wedding","Strawberry","Nostalgia"}
+	char *words[]= {"Future","Rainbow","Wedding","Strawberry","Nostalgia"}
 	int size=sizeof(word)/(char*);
 	int *word = ramdom(word,size);
 	system("pause");
 	//falta cuando ingrese la palabra
-	while(hits >6){
+	while(hits>0){
 	-->printf("");
 	fflush(stdin);
 	show_word(letter);
