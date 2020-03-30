@@ -9,6 +9,7 @@
         int num_hits=0;
         int num fails=0;
         int size = 0;
+// mostrar instrucciones
 void instruction(){
 	printf("WELCOME TO HAMGMAN\n");
 	printf("*********************\n");
@@ -22,6 +23,7 @@ void instruction(){
         printf("    Nostalgia\n");
 
 }
+// palabra al azar
 int ramdom(int stop1, int stop2){
 	int valor=rand()% stop1 + stop2;
 	return valor;
@@ -39,6 +41,7 @@ void hiting_hits(char letter){
 	exit(0);
 	}
 }
+//intentos fallidos
 void hiting_fails(char letter){
 	fails[num_hits]=letter;
 	num_fails++;
@@ -50,6 +53,7 @@ void hiting_fails(char letter){
 	}
 
 }
+//anteponer oportunidades
 bool before_hits(char letter){
 	int i;
 	for(i=0; i<num_hits;i++){
@@ -59,11 +63,12 @@ bool before_hits(char letter){
 	}
 	return false;
 }
+//tablero de palabra, para mostrarla
 void show_word(char letter){
 	int hit = false;
 	int i;
 	for(i=0; i<size;i++){
-	if(word[i]==letter){
+	if(words[i]==letter){
 	hiting_hits(letter);
 	printf("%c", letter);
 	hit=true;
@@ -73,8 +78,8 @@ void show_word(char letter){
 		printf("*");
 		}
 	}
-
 }
+//funcion principal
 int main(int argc, char** argv){
 	int arg = argc-1;
 	if(arg == 0){
@@ -82,10 +87,11 @@ int main(int argc, char** argv){
 	}else
 	int begin = argc;
 	srand(time(NULL));
-	char *words[]= {"Future","Rainbow","Wedding","Strawberry","Nostalgia"}
+	char *word[]= {"Future","Rainbow","Wedding","Strawberry","Nostalgia"}
 	int size=sizeof(word)/(char*);
 	int *word = ramdom(word,size);
-	//falta cuando ingrese la palabra
+	//falta poner la palabra del azar
+	//creo que falta ose size para otra palabra
 	show_word(letter);
 	system(pause);
 return (0);
