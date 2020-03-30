@@ -3,6 +3,12 @@
 #include<string.h>
 #include<stdbool.h>
 
+	char hits[100];
+        char fails[100];
+        int attempt = 6;
+        int num_hits=0;
+        int num fails=0;
+        int size = 0;
 void instruction(){
 	printf("WELCOME TO HAMGMAN\n");
 	printf("*********************\n");
@@ -25,13 +31,6 @@ int ramdom(int stop1, int stop2){
 	char *word=arreglo[index];
 return word;
 }
-
-	char hits[100];
-	char fails[100];
-	int attempt = 6;
-	int num_hits=0;
-	int num fails=0;
-	int size = 0;
 void hiting_hits(char letter){
 	hits[num_hits]=letter;
 	num_hits++;
@@ -86,12 +85,8 @@ int main(int argc, char** argv){
 	char *words[]= {"Future","Rainbow","Wedding","Strawberry","Nostalgia"}
 	int size=sizeof(word)/(char*);
 	int *word = ramdom(word,size);
-	system("pause");
 	//falta cuando ingrese la palabra
-	while(hits>0){
-	-->printf("");
-	fflush(stdin);
 	show_word(letter);
-	}
+	system(pause);
 return (0);
 }
